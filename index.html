@@ -9,7 +9,7 @@
     <h1>Preencha seus dados</h1>
 
     <!-- Formulário HTML com o link correto do Formspree -->
-    <form action="https://formspree.io/f/xeoqrdlq" method="POST">
+    <form action="https://formspree.io/f/xeoqrdlq" method="POST" id="formulario">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
 
@@ -19,11 +19,18 @@
         <label for="telefone">Telefone:</label><br>
         <input type="tel" id="telefone" name="telefone" required><br><br>
 
-        <!-- Novo campo de Endereço -->
         <label for="endereco">Endereço:</label><br>
         <textarea id="endereco" name="endereco" rows="4" cols="50" placeholder="Digite seu endereço completo..." required></textarea><br><br>
 
         <button type="submit">Enviar</button>
     </form>
+
+    <!-- JavaScript para limpar o formulário após o envio -->
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            // Limpar os campos do formulário após o envio
+            event.target.reset();
+        });
+    </script>
 </body>
 </html>
