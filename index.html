@@ -9,7 +9,7 @@
     <h1>Preencha seus dados</h1>
 
     <!-- Formulário HTML com o link correto do Formspree -->
-    <form action="https://formspree.io/f/xeoqrdlq" method="POST" id="formulario">
+    <form action="https://formspree.io/f/xeoqrdlq" method="POST">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
 
@@ -24,14 +24,6 @@
 
         <button type="submit">Enviar</button>
     </form>
-
-    <!-- JavaScript para limpar o formulário após o envio -->
-    <script>
-        document.getElementById('formulario').addEventListener('submit', function(event) {
-            // Limpar os campos do formulário após o envio
-            event.target.reset();
-        });
-    </script>
 </body>
 </html>
 
