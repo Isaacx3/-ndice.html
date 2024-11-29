@@ -4,32 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Dados</title>
+    <style>
+        /* Estilo global */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Container principal do formulário */
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo dos campos de entrada */
+        label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* Estilo do botão de envio */
+        button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo de mensagem de erro ou sucesso */
+        .message {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .success {
+            color: #28a745;
+        }
+
+        .error {
+            color: #dc3545;
+        }
+    </style>
 </head>
 <body>
-    <h1>Preencha seus dados</h1>
+    <div class="form-container">
+        <h1>Preencha seus dados</h1>
 
-    <!-- Formulário HTML com o link correto do Formspree -->
-    <form action="https://formspree.io/f/xeoqrdlq" method="POST">
-        <!-- Campo Nome -->
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+        <!-- Formulário HTML com o link correto do Formspree -->
+        <form action="https://formspree.io/f/xeoqrdlq" method="POST">
+            <!-- Campo Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-        <!-- Campo E-mail -->
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+            <!-- Campo E-mail -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-        <!-- Campo Telefone -->
-        <label for="telefone">Telefone:</label><br>
-        <input type="tel" id="telefone" name="telefone" required><br><br>
+            <!-- Campo Telefone -->
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
 
-        <!-- Campo Endereço -->
-        <label for="endereco">Endereço:</label><br>
-        <textarea id="endereco" name="endereco" rows="4" cols="50" placeholder="Digite seu endereço completo..." required></textarea><br><br>
+            <!-- Campo Endereço -->
+            <label for="endereco">Endereço:</label>
+            <textarea id="endereco" name="endereco" rows="4" placeholder="Digite seu endereço completo..." required></textarea>
 
-        <!-- Botão de envio -->
-        <button type="submit">Enviar</button>
-    </form>
+            <!-- Botão de envio -->
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Mensagem de confirmação (pode ser ativada via JS) -->
+        <!-- <div class="message success">Dados enviados com sucesso!</div> -->
+        <!-- <div class="message error">Ocorreu um erro ao enviar seus dados. Tente novamente.</div> -->
+    </div>
 </body>
 </html>
-
 
