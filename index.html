@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Dados</title>
     <style>
-        /* Estilo global */
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f7fc;
@@ -16,44 +23,58 @@
             margin: 0;
         }
 
-        /* Container principal do formulário */
+        /* Estilo do container do formulário */
         .form-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 500px;
-        }
-
-        h1 {
+            max-width: 480px;
             text-align: center;
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 20px;
         }
 
-        /* Estilo dos campos de entrada */
+        /* Estilo do nome da empresa */
+        .company-name {
+            font-size: 32px;
+            color: #28a745; /* Verde */
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        /* Estilo do título principal */
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 24px;
+        }
+
+        /* Estilo do formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
         label {
             font-size: 14px;
             color: #555;
-            margin-bottom: 6px;
-            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            margin-top: 10px;
         }
 
         input, textarea {
             width: 100%;
             padding: 12px;
+            font-size: 16px;
+            margin-bottom: 16px;
             border: 2px solid #ddd;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            box-sizing: border-box;
-            transition: border-color 0.3s ease;
+            border-radius: 8px;
+            transition: border-color 0.3s;
         }
 
         input:focus, textarea:focus {
-            border-color: #007BFF;
+            border-color: #fd7e14; /* Laranja */
             outline: none;
         }
 
@@ -64,25 +85,23 @@
 
         /* Estilo do botão de envio */
         button {
-            background-color: #007BFF;
+            background-color: #fd7e14; /* Laranja */
             color: white;
             font-size: 16px;
-            padding: 12px 20px;
+            padding: 14px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #e35d00; /* Laranja mais escuro */
         }
 
-        /* Estilo de mensagem de erro ou sucesso */
+        /* Estilo de mensagem de sucesso ou erro */
         .message {
             font-size: 14px;
-            text-align: center;
             margin-top: 20px;
         }
 
@@ -96,7 +115,13 @@
     </style>
 </head>
 <body>
+
+    <!-- Container do formulário -->
     <div class="form-container">
+        <!-- Nome da empresa -->
+        <div class="company-name">PSV SOLUTIONS</div>
+
+        <!-- Título do formulário -->
         <h1>Preencha seus dados</h1>
 
         <!-- Formulário HTML com o link correto do Formspree -->
@@ -120,11 +145,9 @@
             <!-- Botão de envio -->
             <button type="submit">Enviar</button>
         </form>
-
-        <!-- Mensagem de confirmação (pode ser ativada via JS) -->
-        <!-- <div class="message success">Dados enviados com sucesso!</div> -->
-        <!-- <div class="message error">Ocorreu um erro ao enviar seus dados. Tente novamente.</div> -->
     </div>
+
 </body>
 </html>
+
 
